@@ -1,10 +1,14 @@
 import GlobalStyles from './styles/global.styles'
 
+import Page from './layout/Page'
+
 const App = (): JSX.Element => {
   return (
     <>
       <GlobalStyles />
-      <div>Hello World</div>
+      <Page>
+        Current Content
+      </Page>
     </>
   )
 }
