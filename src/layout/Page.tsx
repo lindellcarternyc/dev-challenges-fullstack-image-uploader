@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import Footer from './Footer'
 
 type PageProps = React.PropsWithChildren<any>
@@ -5,15 +6,23 @@ type PageProps = React.PropsWithChildren<any>
     className?: string
   }
 
-function Page(props: PageProps): JSX.Element {
+const PageWrapper = styled.div`
+  display: flex;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+`
+
+const Page = (props: PageProps): JSX.Element => {
   const { children, className, ...rest } = props 
   return (
-    <div className={className} {...rest}>
+    <PageWrapper className={className} {...rest}>
       {children}
       <Footer>
         Lindell, Bitch!
       </Footer>
-    </div>
+    </PageWrapper>
   )
 }
 
