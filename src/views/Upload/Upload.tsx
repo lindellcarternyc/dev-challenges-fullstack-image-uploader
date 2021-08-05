@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Card from '../../components/Card'
+import { Card, CardTitle } from '../../components/Card'
 
 import DragDrop from './components/DragDrop'
 import UploadInput from './components/UploadInput'
@@ -9,11 +9,6 @@ const UploadWrapper = styled(Card)`
   text-align: center;
   & > * {
     margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 500;
   }
 
   p {
@@ -28,7 +23,7 @@ const UploadWrapper = styled(Card)`
 const Upload = (): JSX.Element => {
   return (
     <UploadWrapper>
-      <h2>Upload your image</h2>
+      <CardTitle>Upload your image</CardTitle>
       <p id="file-types">File should be .jpg / .jpeg / .png</p>
       <DragDrop />
       <p>Or</p>
