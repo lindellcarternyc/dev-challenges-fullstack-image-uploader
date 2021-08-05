@@ -1,17 +1,14 @@
 import GlobalStyles from './styles/global.styles'
 
 import Page from './layout/Page'
-
-import Card from './components/Card'
+import Upload from './views/Upload/Upload'
 
 const App = (): JSX.Element => {
   return (
     <>
       <GlobalStyles />
       <Page>
-        <Card>
-          Hello World
-        </Card>
+        <Upload />
       </Page>
     </>
   )
