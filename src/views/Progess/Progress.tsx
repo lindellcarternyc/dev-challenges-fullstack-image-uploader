@@ -2,15 +2,16 @@ import styled from 'styled-components'
 import { Card, CardTitle } from '../../components/Card'
 import ProgressBar from './components/ProgressBar'
 
-const ProgressWrapper = styled(Card)`
-  width: 400px;
+const ProgressTitle = styled(CardTitle)`
+  margin-bottom: 1rem;
 `
+
 const Progress = (): JSX.Element => {
   return (
-    <ProgressWrapper>
-      <CardTitle>Uploading...</CardTitle>
+    <Card>
+      <ProgressTitle>Uploading...</ProgressTitle>
       <ProgressBar percentCompleted={50} />
-    </ProgressWrapper>
+    </Card>
   )
 }
 
